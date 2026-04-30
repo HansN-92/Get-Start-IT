@@ -35,10 +35,11 @@ function editPizzaView(){
     <button onclick="changeView('home')">Home</button>
     <ul>
         <li>Pizza: <strong> ${selectedPizza.name} </strong></li>
-        <li>Base: ${selectedPizza.base} <button onclick="editSelectedPizza()">Change</button></li>
-        <li>Topping: ${selectedPizza.topping.join(", ")} <button onclick="editSelectedPizza()">Change</button></li>
+        <li>Base: ${selectedPizza.base} <button onclick="editPizzaBase()">Change</button></li>
+        <li>Topping: ${selectedPizza.topping.join(", ")} <button onclick="editPizzaTopping()">Change</button></li>
         <li>Sauce: ${selectedPizza.sauce} <button onclick="editSelectedPizza()">Change</button></li>
         <li>Price: ${selectedPizza.price} Kr,-</li>    
+        <button onclick="orderPizza(); changeView('order')">Order</button>
     </ul>
     </div>
     `

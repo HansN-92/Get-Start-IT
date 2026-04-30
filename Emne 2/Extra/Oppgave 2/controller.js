@@ -21,8 +21,27 @@ function orderPizza(){
     }
 }
 
-function editSelectedPizza(){
+function editPizzaBase(){
+    if (model.viewState.pizza.base === "Italian"){
+        model.viewState.pizza.base = "American";
+    }
+    else if (model.viewState.pizza.base === "American"){
+        model.viewState.pizza.base = "Italian";
+    }
+    else alert("Error")
+    updateView();
+}
+
+function editPizzaTopping(){
+    model.data.allToppings
+
+    updateView();
+}
+
+function editPizzaSauce(){
+    model.data.allSauces
     
+    updateView();
 }
 
 function totalOrderPrice(){

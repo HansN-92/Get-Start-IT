@@ -21,6 +21,10 @@ const model = {
   },
 
   data: {
+    allToppings: ["Onion", "Ham", "Cheese", "Meatballs", "Paprika", "Mushroom", "Pepperoni", "Beef"],
+    
+    allSauces: ["None", "Garlic", "Tomato"],
+    
     pizza: [
       {
         name: "Billig Pizza",
