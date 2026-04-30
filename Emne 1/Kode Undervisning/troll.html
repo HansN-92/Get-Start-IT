@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .img{
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <input id="myInput" onchange="setName()">
+    <button onclick="updateView()">Start</button>    
+    <div id="tekstBox"></div>   
+    <script>
+        /* "Mini adventure game"
+        Inputfelt for å velge navnet til spilleren -> 
+        knapp "Start" tegner opp "velkommen "navn",
+        bilde av troll, og hvor mye penger man har,
+        Hvor mye energi man har
+        En knapp for å plukke opp "gull/penger"
+        En knapp for å slå trollet -> når man slår mister man energi, og trollet mister liv*/
+
+        let trollLife = 100;
+        let stamina = 20;
+        let coins = 0;
+        let name = '';
+        function setName(){
+            name = document.getElementById('myInput').value; //input felt har verdi value
+            console.log(name)
+            updateView()
+        }
+        function updateView(){
+            document.getElementById('tekstBox').innerHTML = /*HTML*/`
+            Velkommen ${name}
+            <br>
+            <img class="img" src="troll.jpg">
+            <br>
+            TrollLife: ${trollLife}
+            Coins: ${coins}
+            Energy: ${stamina}
+            <button onclick="pickUpCoins()">Pick up 10 coins</button>
+            <button onclick="hitTroll()">Hit troll</button>
+            `
+        }
+        function pickUpCoins(){
+            coins += 10;
+            updateView();
+        }
+        function hitTroll(){
+            trollLife -= 10;
+            stamina -= 1;
+            updateView();
+        }
+    </script>
+</body>
+</html>

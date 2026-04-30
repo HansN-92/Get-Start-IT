@@ -1,0 +1,22 @@
+body {
+    margin: 0px;
+    font-size: x-large;
+    -webkit-user-select: none;
+    user-select: none;
+    background-image: url("../images/background/creeperbk.jpg");
+    background-size: cover;
+    min-height: 100vh;
+}
+
+#eat-drink, #sleep, #cleanHUD, #boredomHUD, #walk, #age, #hungerHUD, #healthHUD {
+    background: wheat;
+    padding: 30px 140px;
+    z-index: 10;
+}
+
+#cleanBark{
+    height: 10px;
+    width: 100px;
+    background-color: brown;
+}
+

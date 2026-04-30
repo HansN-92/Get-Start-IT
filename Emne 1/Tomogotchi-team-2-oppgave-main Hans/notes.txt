@@ -1,0 +1,52 @@
+
+<div id="section-one"> 
+        <div id="sleep">Sleep</div>
+        <div id="walk">Walk</div>
+        <div id="age">Age</div>
+   </div>  
+   <div id="gameplay">
+   </div>
+    <div id="section-two">
+        <div id="hunger">mat<button id="feedButton" onclick="feed(25)">Feed</button> 
+    <progress id="hungerBar" value="${hunger}" max="${maxHunger}"></progress></div>
+        <div id="clean">Wash</button>
+            
+        </div>
+        <div id="play">Play</div>
+    </div>
+
+const hungerHud = document.getElementById("hunger");
+const cleanliness = document.getElementById("clean");
+const boredomHud = document.getElementById("boredom");
+const healthBar = document.getElementById("");
+const tamagotchiImg = document.getElementById ("")
+
+function updateCleanView(){
+    cleanliness.innerHTML = /*html*/ `
+    <button onclick="cleanUp()">
+    Clean <progress id="clean" value="${cleanLevel}" max="${maxClean}"></progress>
+    </button>`
+}
+
+/* function updateHungerView(){
+    return /*HTML*/ /*`
+    <button id="feedButton" onclick="feed(25)"></button> 
+    <progress id="hungerBar" value="${hunger}" max="${maxHunger}"></progress> 
+    `; 
+}
+    /* hungerHud.innerHTML = */
+
+
+
+function test1(){
+    return /*HTML*/ `
+    <button id="feedButton" onclick="feed(25)"></button> 
+    <progress id="hungerBar" value="${hunger}" max="${maxHunger}"></progress> 
+    `;
+}
+
+function updateBoredomView(){
+    boredomHud.innerHTML = /*HTML*/ `
+    <button id="playButton" onclick="play(25)"></button> 
+    <progress id="boredomBar" value="${boredom}" max="${maxBoredom}"></progress> 
+    `;}
