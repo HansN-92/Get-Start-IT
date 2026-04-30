@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="./scripts/styles.css">
+    <title>Document</title>
+</head>
+<body>
+   <div id="section-one">
+        <h2>Animals</h2>
+       <div ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)" id="animal-inv"></div>
+        <h2>tools</h2>
+       <div ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)" id="tools-inv"></div>
+   </div>
+   <div class="gameplay">
+        <div class="dropanddrag" id="animals">
+            <img draggable="true" ondragstart="dragstartHandler(event)" id="chicken" src="./images/chicken.jpg">
+        </div>
+        <div class="dropanddrag" id="tools">
+            <img draggable="true" ondragstart="dragstartHandler(event)" id="hoe" src="./images/farminghoe.jpg">
+        </div>
+        <div class="dropanddrag" id="building">
+            <img draggable="true" ondragstart="dragstartHandler(event)" id="barn" src="./images/barn.jpg">
+        </div>
+        <div class="dropanddrag" id="vegetables">
+            <img draggable="true" ondragstart="dragstartHandler(event)" id="wheat" src="./images/wheat.jpg">
+        </div>
+   </div>
+    <div id="section-two">
+        <h2>vegetables</h2>
+        <div ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)" id="vegetable-inv"></div>
+        <h2>building</h2>
+        <div ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)" id="building-inv"></div>
+    </div>
+   <script src="./scripts/index.js"></script>
+    <script src="./scripts/keybinds.js"></script>
+</body>
+</html>

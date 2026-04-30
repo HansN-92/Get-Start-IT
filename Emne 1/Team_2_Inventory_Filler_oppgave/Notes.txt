@@ -1,0 +1,34 @@
+Setup:
+
+Basics:
+ 2 class for css (synlige/usynlig)
+ 4 ID'er for kategorier (hvilken inventory de går inn i)
+ dyr, grønnsaker, redskaper, bygg? 3-4 forskjellige elementer per kategori
+ Hvert element  = 1 plass i inventory 
+ Kan flytte mellom kategorier 
+ Et game varer x sekunder, score basert på hvor mange elementer som er i riktig kategori på slutten
+ 
+
+ Hva vi har gjort første to timene
+ - Begynt med HTML/CSS design
+ - Begynt med keybinds (dragover handler)
+ - Satt opp variabler
+ - Begynt med tilfeldig bevegelse på ting
+ 
+
+ Hva vi må prioritere neste to timer
+ - Teste basic funksjon (hvis vi har alt vi trenger)
+ - Få randomized items til å fungere med variablene vi har og riktig ID
+ - Legge til resten av funksjonene hvis man har tid
+
+Utenom arb tid notes.
+ 
+settes på hver enkelt drop destination: ondrop="dropHandler(event)"   ondragover="dragoverHandler(event)"
+settes på hver enkelt dragaable img: draggable="true" ondragstart="dragstartHandler(event)"
+kan da dra ting in OG ut av hver enkelt inv
+testet lokalt: funker, funker også å drag and drop mens de faller
+
+Presentasjon:
+ - Vise funksjoner og design
+ - Kort fortelle om hva og hvordan vi har jobba
+ - 
