@@ -36,8 +36,12 @@ function editPizzaView(){
     <ul>
         <li>Pizza: <strong> ${selectedPizza.name} </strong></li>
         <li>Base: ${selectedPizza.base} <button onclick="editPizzaBase()">Change</button></li>
-        <li>Topping: ${selectedPizza.topping.join(", ")} <button onclick="editPizzaTopping()">Change</button></li>
-        <li>Sauce: ${selectedPizza.sauce} <button onclick="editSelectedPizza()">Change</button></li>
+        <li>Topping: ${model.data.allToppings.map(t => /* HTML */ `
+            <label><input type="checkbox" ${selectedPizza.topping.includes(t) ? "checked" : ""} onchange="editPizzaTopping('${t}')">${t}</label>`).join("")} </li>
+    
+        <li>Sauce: ${model.data.allSauces.map(s => /* HTML */ `
+            <label><input type="radio" name="sauce" ${selectedPizza.sauce.includes(s) ? "checked" : ""} onchange="editPizzaSauce('${s}')">${s}</label>`).join("")} </li>
+        
         <li>Price: ${selectedPizza.price} Kr,-</li>    
         <button onclick="orderPizza(); changeView('order')">Order</button>
     </ul>

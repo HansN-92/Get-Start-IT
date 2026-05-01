@@ -19,6 +19,7 @@ function orderPizza(){
         else return;
 
     }
+    console.log(model.viewState.pizza.topping)
 }
 
 function editPizzaBase(){
@@ -32,14 +33,18 @@ function editPizzaBase(){
     updateView();
 }
 
-function editPizzaTopping(){
-    model.data.allToppings
-
+function editPizzaTopping(topping){
+    const toppings = model.viewState.pizza.topping;
+    if(toppings.includes(topping))
+        model.viewState.pizza.topping = toppings.filter(t => t !== topping);
+    else
+        toppings.push(topping);
+    
     updateView();
 }
 
-function editPizzaSauce(){
-    model.data.allSauces
+function editPizzaSauce(sauce){
+    model.viewState.pizza.sauce = sauce; 
     
     updateView();
 }
