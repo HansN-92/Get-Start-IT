@@ -25,13 +25,35 @@ const model = {
     
     allSauces: ["None", "Garlic", "Tomato"],
     
+    toppingPrices: {
+      "Onion": 5,
+      "Ham": 15,
+      "Cheese": 10,
+      "Meatballs": 20,
+      "Paprika": 5,
+      "Mushroom": 5,
+      "Pepperoni": 20,
+      "Beef": 25,
+    },
+
+    saucePrices: {
+      "None": 0,
+      "Garlic": 15,
+      "Tomato": 15,
+    },
+
+    basePrices: {
+      "Italian": 100,
+      "American": 200,
+    },
+
     pizza: [
       {
         name: "Billig Pizza",
         base: "Italian",
         topping: ["Onion", "Ham", "Cheese"],
         sauce: "None",
-        price: 123,
+        price: 130,
         id: 1,
       },
       {
@@ -39,7 +61,7 @@ const model = {
         base: "Italian",
         topping: ["Meatballs", "Paprika", "Cheese", "Mushroom"],
         sauce: "Garlic",
-        price: 199,
+        price: 155,
         id: 2,
       },
       {
@@ -47,7 +69,7 @@ const model = {
         base: "American",
         topping: ["Pepperoni", "Ham", "Beef", "Cheese"],
         sauce: "Tomato",
-        price: 249,
+        price: 285,
         id: 3,
       },
 

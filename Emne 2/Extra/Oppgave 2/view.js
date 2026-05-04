@@ -79,18 +79,34 @@ function pizzaOrderView(){
     const orderedPizza = model.data.orders
 
     let orderList = "";
-    for (let i = 0; i < orderedPizza.length; i++){
-        const orders = orderedPizza[i];
 
-        orderList += /* html */ `
-        <div id="orderlist">
-        <li>
-        ${orders.name}
-        ${orders.price} Kr,-
-        </li>
-        </div>
-        `
+    for (let i = 0; i < orderedPizza.length; i++){
+    const orders = orderedPizza[i];
+
+    const added = orders.topping.filter(t => !orders.originalToppings.includes(t));
+    const removed = orders.originalToppings.filter(t => !orders.topping.includes(t));
+
+    let changes = "";
+    for (let j = 0; j < added.length; j++){
+        changes += /* html */ `<li>+ ${added[j]} ${model.data.toppingPrices[added[j]]} Kr,-</li>`;
     }
+    for (let j = 0; j < removed.length; j++){
+        changes += /* html */ `<li>- ${removed[j]} ${model.data.toppingPrices[removed[j]]} Kr,-</li>`;
+    }
+
+    if(orders.base !== orders.originalBase)
+    changes += /* html */ `<li>Base endret: ${orders.originalBase} → ${orders.base}</li>`;
+
+    if(orders.sauce !== orders.originalSauce)
+    changes += /* html */ `<li>Sauce endret: ${orders.originalSauce} → ${orders.sauce}</li>`;
+
+    orderList += /* html */ `
+        <div id="orderlist">
+        <li>${orders.name} ${orders.price} Kr,-</li>
+        ${changes}
+        </div>
+    `;
+}
 
     return /* HTML */ `
     <div id="pizzaOrderView">
