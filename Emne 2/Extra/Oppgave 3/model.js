@@ -14,6 +14,18 @@ const model = {
       power: null,
       manaCost: null,
       element: null,
+      effect: null,
+      type: null,
+      id: null,
+    },
+
+    selectedSpell: 
+    {
+      name: null,
+      power: null,
+      manaCost: null,
+      element: null,
+      effect: null,
       type: null,
       id: null,
     },
@@ -31,6 +43,7 @@ const model = {
       power: 50,
       manaCost: 20,
       element: "Fire",
+      effect: "Burn",
       type: "spell",
       id: 1,
     },
@@ -39,6 +52,7 @@ const model = {
       power: 40,
       manaCost: 25,
       element: "Ice",
+      effect: "Freeze",
       type: "spell",
       id: 2,
     },
@@ -47,6 +61,7 @@ const model = {
       power: 35,
       manaCost: 15,
       element: "Lightning",
+      effect: "Chain",
       type: "spell",
       id: 3,
     },
@@ -55,6 +70,7 @@ const model = {
       power: 0,
       manaCost: 30,
       element: "Enchantment",
+      effect: "Stun",
       type: "spell",
       id: 4,
     },
@@ -63,9 +79,14 @@ const model = {
       power: 20,
       manaCost: 0,
       element: "Evocation",
+      effect: "None",
       type: "cantrip",
       id: 5,
     },
+
+    ],
+
+    usedSpells: [
 
     ]
   }
